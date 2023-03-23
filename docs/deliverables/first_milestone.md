@@ -39,4 +39,4 @@ For this presentation each team must prepare:
 
 ## Presentation
 
-To see the deliverable presented in the class, download [here](https://github.com/mankings/vVCU-as-CNF/blob/main/project-website/docs/deliverables/Milestone1.pptx?raw=true).
+To see the deliverable presented in the class, download [here](https://github.com/vVCU-as-CNF/website/raw/main/docs/deliverables/Milestone1.pptx).

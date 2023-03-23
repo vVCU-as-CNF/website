@@ -64,4 +64,4 @@ For this 10 minute presentation each team must prepare:
 
 ## Presentation
 
-To see the deriverable presented in the class, download [here](https://github.com/mankings/vVCU-as-CNF/blob/main/project-website/docs/deliverables/Milestone2.pptx?raw=true).
+To see the deriverable presented in the class, download [here](https://github.com/vVCU-as-CNF/website/raw/main/docs/deliverables/Milestone2.pptx).

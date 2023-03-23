@@ -40,10 +40,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -76,46 +73,16 @@ const config = {
             position: "left",
           },
           {
-            to: "https://github.com/mankings/vVCU-as-CNF",
+            to: "https://github.com/vVCU-as-CNF",
             label: "GitHub",
             position: "left",
           },
         ],
       },
       footer: {
-        // logo: {
-        //   src: "img/logo.ico",
-        // },
+        
         style: "dark",
-        // links: [
-
-        //   {
-        //     title: 'Community',
-        //     items: [
-        //       {
-        //         label: 'Stack Overflow',
-        //         href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-        //       },
-        //       {
-        //         label: 'Discord',
-        //         href: 'https://discordapp.com/invite/docusaurus',
-        //       },
-        //       {
-        //         label: 'Twitter',
-        //         href: 'https://twitter.com/docusaurus',
-        //       },
-        //     ],
-        //   },
-        //   {
-        //     title: 'More',
-        //     items: [
-        //       {
-        //         label: 'GitHub',
-        //         href: 'https://github.com/facebook/docusaurus',
-        //       },
-        //     ],
-        //   },
-        // ],
+        
         copyright: `Copyright © PI ${new Date().getFullYear()}`,
       },
       prism: {
