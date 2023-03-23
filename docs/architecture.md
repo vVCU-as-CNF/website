@@ -2,6 +2,11 @@
 sidebar_position: 2
 ---
 
-# Project Architecture
+# Architecture
+
+<div>
+    ![]()
+</div>
+
 
 In development 😩 ...
