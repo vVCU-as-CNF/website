@@ -16,4 +16,8 @@ The purpose is to establish the baseline of the architecture of the system and p
 
 ## Presentation
 
-To see the deriverable presented in the class, download [here](https://uapt33090-my.sharepoint.com/:v:/g/personal/tiagogcarvalho_ua_pt/EdXE1rjEQLhJsTRvwlU1SBcBtc0T1YyhQ-rlK13rYguA3Q?e=LOW1XI).
+To see the deriverable presented in the class, download [here](https://github.com/vVCU-as-CNF/website/raw/main/docs/deliverables/Milestone3.pptx).
+
+## Interface Demo
+
+To view a demo Grafana implementation with some project visualizations, you can download the video presented in this milestone [here](https://we.tl/t-VMWUAJEwDX)
