@@ -1,0 +1,8 @@
+{
+  "label": "State Of Art",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "State Of Art collected and researched during the development of the project."
+  }
+}

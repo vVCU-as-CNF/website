@@ -39,26 +39,38 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: 'docs',
+          routeBasePath: 'docs',
           sidebarPath: require.resolve("./sidebars.js"),
-          
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
-      }),
+      }), 
     ],
   ],
-
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'references',
+        path: 'references',
+        routeBasePath: 'references',
+        sidebarPath: require.resolve('./sidebars.js'),
+        // ... other options
+      },
+    ],
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 
     ({
       // Replace with your project's social card
-      colorMode: {
-        defaultMode: "light",
-        disableSwitch: true,
-        respectPrefersColorScheme: false,
-      },
+      // colorMode: {
+      //   defaultMode: "light",
+      //   disableSwitch: true,
+      //   respectPrefersColorScheme: false,
+      // },
       image: "img/docusaurus-social-card.jpg",
       navbar: {
         title: "vVCU-as-CNF",
@@ -67,22 +79,31 @@ const config = {
         },
         items: [
           {
-            type: "doc",
-            docId: "intro",
+            to: '/docs/documentation',
             label: "Documentation",
             position: "left",
+            activeBaseRegex: `/docs/`
+          },
+          {
+            to: '/references/glossary',
+            label: "References",
+            position: "left",
+            activeBaseRegex: `/references/`
+          },
+          {
+            to: "https://github.com/vVCU-as-CNF",
+            label: "Grafana Dashboard",
+            position: "right",
           },
           {
             to: "https://github.com/vVCU-as-CNF",
             label: "GitHub",
-            position: "left",
+            position: "right",
           },
         ],
       },
       footer: {
-        
         style: "dark",
-        
         copyright: `Copyright © PI ${new Date().getFullYear()}`,
       },
       prism: {

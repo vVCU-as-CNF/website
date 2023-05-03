@@ -24,7 +24,7 @@ function HomepageHeader() {
           including digital twins of 5G-enabled Vehicular Communications Units
         </p>
         <div className={styles.buttons} style={{ marginTop: "50px" }}>
-          <Link className="button button--secondary" to="/docs/intro">
+          <Link className="button button--secondary" to="/docs/documentation">
             Learn More
           </Link>
         </div>
@@ -41,7 +41,7 @@ export default function Home() {
       <div className={clsx(styles.ourTeam)}>
         <div className="container">
           <h1 className="">Our Goals</h1>
-          <img src="img/timeline.png" style={{maxWidth: "70%"}}/>
+          <img src="img/goalspi.png" style={{maxWidth: "80%", marginTop:"30px"}}/>
         </div>
       </div>
       <main></main>
