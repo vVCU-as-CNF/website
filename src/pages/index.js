@@ -4,16 +4,12 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
-
 import styles from "./index.module.css";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header
-      className={clsx("hero hero--primary", styles.heroBanner)}
-      styles={{}}
-    >
+    <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
         <h1 className="hero__title" style={{ font: "100px" }}>
           {siteConfig.title}
@@ -38,21 +34,18 @@ export default function Home() {
   return (
     <Layout>
       <HomepageHeader />
-      <div className={clsx(styles.ourTeam)}>
-        <div className="container">
-          <h1 className="">Our Goals</h1>
-          <img src="img/goalspi.png" style={{maxWidth: "80%", marginTop:"30px"}}/>
+        <div className={clsx(styles.ourTeam)}>
+          <div className="container">
+            <h1 className="">Our Goals</h1>
+            <img src="img/goalspi.png" style={{maxWidth: "80%", marginTop:"30px"}}/>
+          </div>
         </div>
-      </div>
-      <main></main>
-      <div className={clsx(styles.ourTeam)}>
-        <div className="container">
-          <h1 className="">Our Team</h1>
+        <div className={clsx(styles.ourTeam)}>
+          <div className="container">
+            <h1 className="">Our Team</h1>
+          </div>
         </div>
-      </div>
-      <main>
-        <HomepageFeatures />
-      </main>
+      <HomepageFeatures />
     </Layout>
   );
 }

@@ -91,7 +91,7 @@ const config = {
             activeBaseRegex: `/references/`
           },
           {
-            to: "https://github.com/vVCU-as-CNF",
+            to: "/dashboard",
             label: "Grafana Dashboard",
             position: "right",
           },
