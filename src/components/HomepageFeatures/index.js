@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import styles from './styles.module.css';
 
 const Orientadores = [
-  {},{
+  {
     title: 'Rafael Direito',
     image : require('@site/static/img/direito.png').default,
     description: (
@@ -20,7 +20,16 @@ const Orientadores = [
         Advisor
       </>
     ),
-  },{}
+  },
+  {
+    title: 'David Rocha',
+    image : require('@site/static/img/david.png').default,
+    description: (
+      <>
+        Co-Advisor
+      </>
+    ),
+  }
 ];
 
 const Alunos1 = [
@@ -106,12 +115,12 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row d-flex justify-content-center">
+        <div className="row d-flex" style={{justifyContent: "center"}}>
           {Orientadores.map((props, idx) => (
             <ViewO key={idx} {...props} />
           ))}
         </div>
-        <div className="row d-flex justify-content-center" style={{marginTop:"30px"}}>
+        <div className="row d-flex" style={{marginTop:"30px", justifyContent: "center"}}>
           {Alunos1.map((props, idx) => (
             <ViewA key={idx} {...props} />
           ))}
