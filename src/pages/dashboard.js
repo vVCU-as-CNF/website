@@ -69,7 +69,7 @@ export default function App() {
         <div style={{ gridColumn: '2', gridRow: '1 / span 4', backgroundSize: 'cover'}}>
           <iframe src="http://10.255.32.4:3000/d-solo/a95b957e-022b-44c8-a706-79ddd2acd931/new-dashboard?orgId=1&panelId=6" width="100%" height="100%" frameborder="0"></iframe>
         </div>
-        <div style={{ gridColumn: '2', gridRow: '5', backgroundImage: `url(${placeholderImage})`, backgroundSize: 'cover'}}>
+        <div style={{ gridColumn: '2', gridRow: '5', backgroundSize: 'cover'}}>
           <iframe src="http://10.255.32.4:3000/d-solo/a95b957e-022b-44c8-a706-79ddd2acd931/new-dashboard?orgId=1&panelId=20" width="100%" height="100%" frameborder="0"></iframe>
         </div>
       </div>
