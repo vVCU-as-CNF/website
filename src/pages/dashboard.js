@@ -2,13 +2,12 @@ import React from 'react';
 import Layout from '@theme/Layout';
 
 export default function App() {
-  const placeholderImage = 'https://picsum.photos/1000'; 
 
   const gridStyle = {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
     gridTemplateRows: '1fr 1fr 1fr 1fr 1fr',
-    height: '85vh', // mudar tamanho total da grelha
+    height: '85vh',
     width: '100vw', 
     gap: '0.3rem',
     backgroundColor: "black"
@@ -77,10 +76,7 @@ export default function App() {
   );
 };
 
-// import React from 'react';
-// import Layout from '@theme/Layout';
-
-// export default function Grafana() {
+  // export default function Grafana() {
 //   return (
 //     <Layout title="Grafana Dashboard">
 //       <div style={{ display: 'flex', flexDirection: "row", height: '75vh', width: '100%', left: "0px", top: '0px', backgroundColor: "black" }}>
