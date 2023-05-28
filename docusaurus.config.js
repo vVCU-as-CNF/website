@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "vVCU-as-CNF",
   tagline: "Dinosaurs are cool",
-  favicon: "img/logo.ico",
+  favicon: "static/img/logo.ico",
 
   // Set the production url of your site here
   url: "https://vvcu-as-cnf.github.io",
@@ -20,7 +20,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "vVCU-as-CNF", // Usually your GitHub org/user name.
   projectName: "website", // Usually your repo name.
-  deploymentBranch: "website-deploy", // Branch where the website shall be deployed.
+  deploymentBranch: "main", // Branch where the website shall be deployed.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -57,7 +57,6 @@ const config = {
         path: 'references',
         routeBasePath: 'references',
         sidebarPath: require.resolve('./sidebars.js'),
-        // ... other options
       },
     ],
   ],
@@ -65,13 +64,6 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 
     ({
-      // Replace with your project's social card
-      // colorMode: {
-      //   defaultMode: "light",
-      //   disableSwitch: true,
-      //   respectPrefersColorScheme: false,
-      // },
-      image: "img/docusaurus-social-card.jpg",
       navbar: {
         title: "vVCU-as-CNF",
         logo: {
@@ -91,11 +83,6 @@ const config = {
             activeBaseRegex: `/references/`
           },
           {
-            to: "/dashboard",
-            label: "Grafana Dashboard",
-            position: "right",
-          },
-          {
             to: "https://github.com/vVCU-as-CNF",
             label: "GitHub",
             position: "right",
@@ -104,7 +91,7 @@ const config = {
       },
       footer: {
         style: "dark",
-        copyright: `Copyright © PI ${new Date().getFullYear()}`,
+        copyright: `Copyright © PI GROUP 1 ${new Date().getFullYear()}`,
       },
       prism: {
         theme: lightCodeTheme,
