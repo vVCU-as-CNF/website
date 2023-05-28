@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "vVCU-as-CNF",
   tagline: "Dinosaurs are cool",
-  favicon: "static/img/logo.ico",
+  favicon: "img/logo.ico",
 
   // Set the production url of your site here
   url: "https://vvcu-as-cnf.github.io",
