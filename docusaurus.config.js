@@ -83,16 +83,21 @@ const config = {
             activeBaseRegex: `/references/`
           },
           {
+            to: "/dashboard",
+            label: "Grafana Dashboard",
+            position: "right",
+          },
+          {
             to: "https://github.com/vVCU-as-CNF",
             label: "GitHub",
             position: "right",
           },
         ],
       },
-      footer: {
-        style: "dark",
-        copyright: `Copyright © PI GROUP 1 ${new Date().getFullYear()}`,
-      },
+      // footer: {
+      //   style: "dark",
+      //   copyright: `Copyright © PI GROUP 1 ${new Date().getFullYear()}`,
+      // },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,

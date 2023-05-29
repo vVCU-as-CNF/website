@@ -51,7 +51,7 @@ Important to note a small but relevant component adjacent to Grafana which is th
 <br></br>
 
 <div style={{textAlign:"center"}}>
-    <img src="https://media.discordapp.net/attachments/1077307423636869142/1112187119289516133/Screenshot_from_2023-05-28_02-15-02.png?width=1440&height=334" style={{maxWidth:"80%"}} />
+    <img src="https://media.discordapp.net/attachments/1079089453198479370/1112856037612069016/general_architecture.drawio.png" style={{maxWidth:"80%"}} />
     <p>Image 1 - Component-Based Architecture</p>
 </div>
 
@@ -116,7 +116,7 @@ Since we needed a manager that could handle all the migration triggers and commu
 <br></br>
 
 <div style={{textAlign:"center"}}>
-    <img src="https://media.discordapp.net/attachments/1077307423636869142/1110486580789002332/arquitetura_updated.png" style={{maxWidth:"80%"}} />
+    <img src="https://media.discordapp.net/attachments/1079089453198479370/1112845350919733299/techs_architecture.png?width=1080&height=516" style={{maxWidth:"80%"}} />
     <p>Image 2 - High-Level System Architecture</p>
 </div>
 
