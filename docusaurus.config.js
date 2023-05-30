@@ -83,7 +83,7 @@ const config = {
             activeBaseRegex: `/references/`
           },
           {
-            to: "/dashboard",
+            to: "http://vvcu-as-a-cnf.av.it.pt/d/a95b957e-022b-44c8-a706-79ddd2acd931/main-dashboard?orgId=1",
             label: "Grafana Dashboard",
             position: "right",
           },
