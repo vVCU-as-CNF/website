@@ -1,6 +1,6 @@
 {
-  "label": "Deliverables",
-  "position": 4,
+  "label": "Milestones",
+  "position": 5,
   "link": {
     "type": "generated-index",
     "description": "Deliverables producted to stage the current status of the project in each milestone."

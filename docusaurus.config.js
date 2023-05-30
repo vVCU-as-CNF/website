@@ -84,7 +84,12 @@ const config = {
           },
           {
             to: "http://vvcu-as-a-cnf.av.it.pt/d/a95b957e-022b-44c8-a706-79ddd2acd931/main-dashboard?orgId=1",
-            label: "Grafana Dashboard",
+            label: "System Dashboard",
+            position: "right",
+          },
+          {
+            to: "http://vvcu-as-a-cnf.av.it.pt/d/dbd697ba-c1ff-41ab-8773-4c98f98de26f/manager-dashboard?orgId=1",
+            label: "Digital Twin Dashboard",
             position: "right",
           },
           {
