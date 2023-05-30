@@ -8,7 +8,7 @@ const VideoComponent = () => {
         <iframe
           width="100%"
           height="350"
-          src="https://www.youtube.com/watch?v=aEB1o1cNU34"
+          src="https://www.youtube.com/embed/aEB1o1cNU34"
           title="Video 1"
           frameBorder="0"
           allowFullScreen
@@ -19,7 +19,7 @@ const VideoComponent = () => {
         <iframe
           width="100%"
           height="350"
-          src="https://www.youtube.com/watch?v=aEB1o1cNU34"
+          src="https://www.youtube.com/embed/ru2GucY1lb0"
           title="Video 2"
           frameBorder="0"
           allowFullScreen
