@@ -253,11 +253,11 @@ Taking into consideration the objectives and features of this project we identif
 - Traffic Managers
 - Drivers 
 
-#### Traffic Managers 
+**Traffic Managers** 
 
 Traffic Managers are the main actor and the primary reference for the features implemented in the project. They consist of a group of entities that execute operations based on the output provided by our solution. 
 
-##### Drivers
+**Drivers**
 
 Drivers represent the group of users who pilot the vehicles that incorporate the OBU which sends all the information regarding the vehicle. The input our system receives is directly influenced by the actions the driver executes with the vehicle.
 
@@ -272,19 +272,19 @@ Platooning (Figure 1), lane changing (Figure 2), lane merging (Figure 3), handli
 <div class="container" style={{display:"flex", flexWrap:"wrap", justifyContent:"center", textAlign:"center"}}>
     <div style={{width:"30%", margin:"5% 5%"}}>
         <img src="https://media.discordapp.net/attachments/945711148903333949/1115075372166434856/image.png?width=624&height=627" alt="Image 1" />
-        <div class="subtitle">Platooning</div>
+        <div class="subtitle">Figure 1 - Platooning</div>
     </div>
     <div style={{width:"30%", margin:"5% 5%"}}>
         <img src="https://media.discordapp.net/attachments/945711148903333949/1115075460003541036/image.png?width=802&height=627" alt="Image 1" />
-        <div class="subtitle">Lane Changing</div>
+        <div class="subtitle">Figure 2 - Lane Changing</div>
     </div>
     <div style={{width:"30%", margin:"5% 5%"}}>
         <img src="https://media.discordapp.net/attachments/945711148903333949/1115075582267510844/image.png?width=1440&height=500" alt="Image 1" />
-        <div class="subtitle">Lane Merging</div>
+        <div class="subtitle">Figure 3 - Lane Merging</div>
     </div>
     <div style={{width:"30%", margin:"5% 5%" }}>
         <img src="https://media.discordapp.net/attachments/945711148903333949/1115075772160409721/image.png?width=1440&height=500" alt="Image 1" />
-        <div class="subtitle">Handling</div>
+        <div class="subtitle">Figure 4 - Handling</div>
     </div>
 </div>
 
@@ -303,143 +303,165 @@ The flow of MCMs typically follows a predefined pattern that enables effective c
 
 The diagrams in Figures 5 and 6 demonstrate a possible scenario in which is present this flow of MCMs.
 
-<img src="" alt="Image 1" />
+<div style={{textAlign:"center"}}>
+  <img src="https://media.discordapp.net/attachments/945711148903333949/1115263649402073150/Untitled_1_1.png" style={{width:"40%"}}/>
+  <p>Figure 5 - MCM negotiation example</p>
+</div>
 
 <br></br>
 
+<br></br>
+
+<br></br>
+
+<div style={{textAlign:"center"}}>
+  <img src="https://media.discordapp.net/attachments/945711148903333949/1115273889677852792/Untitled_4.png" style={{width:"80%"}}/>
+  <p>Figure 6 - MCM negotiation example</p>
+</div>
+
+<br></br>
 ---
 
 ## Solution Specification
 
 ### Functional Requirements
 
-#### Creation of a Digital Twin 
+**Creation of a Digital Twin** 
 
 Our solution must handle the creation of a Digital Twin application corresponding to a virtual representation of an existing OBU.
 
-#### Cloud-Native Network Function 	 
+**Cloud-Native Network Function** 	 
 
 Our solution must provide a Cloud-Native Network Function that can use our digital twins and handle all communications to and from the digital twins. 
 
-#### Digital Twin Migration		 
+**Digital Twin Migration**		 
 
 Our solution must handle the migration process of a Digital Twin from one MEC to another.
 
-#### Trigger a Migration based on location 
+**Trigger a Migration based on location** 
 
 Our solution must identify when a migration needs to occur. The migration of a Digital Twin should be triggered according to its respective OBU location.  
 
-#### Dashboard displaying system information 
+**Dashboard displaying system information** 
 
 Our solution must provide a user-friendly graphical interface that displays information regarding the system’s components, as well as its performance.
 
-#### Dashboard showcasing Digital Twin migration 
+**Dashboard showcasing Digital Twin migration** 
 
 Our solution must also provide a user-friendly graphical interface that showcases specific Digital Twin information, as well as its migration process.
 
+<br></br>
+
 ### Non-functional requirements
 
-#### Performance		 
+**Performance**		 
 
 The system should provide fast and responsive CCAM services to support real-time decision-making and control. 
 
-#### Scalability		 
+**Scalability**		 
 
 The system should be able to support many vVCUs and CNFs, as well as handle traffic from multiple users.
 
-#### Reliability		 
+**Reliability**		 
 
 The system should be reliable and available, with minimal downtime or disruptions to CCAM services.
 
-#### Security		 
+**Security**		 
 
 The system should be secure and protect sensitive data transmitted between vVCUs and CNFs.
 
-#### Usability		 
+**Usability**		 
 
 The system should be easy to use and provide a user-friendly dashboard that displays the information being transmitted to the vVCU.
 
-#### Portability		 
+**Portability**		 
 
 The system should be portable and able to migrate CCAM services between different 5G network infrastructures belonging to different Mobile Network Operators. 
 
-#### Maintainability	 
+**Maintainability** 
 
 The system should be easy to maintain and update, with the ability to fix bugs and add new features to the vVCU and CNF.
 
+<br></br>
+
 ### Architecture
 
-(insert image)
+<div style={{textAlign:"center"}}>
+  <img src="https://media.discordapp.net/attachments/945711148903333949/1115264623537565697/general_architecture.drawio.png" style={{width:"80%"}}/>
+  <p>Figure 7 - High-Level Architecture</p>
+</div>
 
 Our architecture has 6 main components, as shown in Figure 7: the VCUs (both the OBUs and RSUs), the message brokers, the orchestrator, the MECs, the manager and the Grafana dashboards.
 
-#### OBUs and RSUs 
+**OBUs and RSUs** 
 
 The OBUs and RSUs are the physical components that we are creating a DT for. They generate data continuously and publish it to a network of message brokers. 
 
 For each of these objects, we instantiate its corresponding digital twin, which gathers all the information regarding its object and forwards it to our user-interface.
 
-#### Message brokers 
+**Message brokers**
 
 The messages in the network are organized by topics, relating both to the sender’s identity and geographic location, and each DT fetches their respective data from them. This includes both data related to its physical counterpart and the surrounding stations to enable cooperation.
 
-#### Orchestrator 
+**Orchestrator** 
 
 The orchestrator is the component that handles the lifecycle of the digital twins. It orchestrates their deployment and management and the resources needed to run these, like network connectivity and virtual machines.  
 
 This orchestrator would consist of a MANO software. MANO is an architectural framework that can coordinate the deployment of cloud-based applications.
 
-#### MECs 
+**MECs** 
 
 The MEC nodes are the hosts for the DTs. These computing nodes are located at the edge of the network, thus allowing for the deployment and execution of the service closer to the devices. 
 
 Due to the nature of a CNF, all stages of the DT’s lifecycle take place in these nodes, from instantiation to deletion. The orchestrator communicates directly with the MECs when it needs to create or delete a digital twin.
 
-#### Manager 
+**Manager** 
 
 The manager is our trigger event listener component. It orchestrates the migration process, is responsible for listening for migrating triggers and handling the subsequent migration logic, as well as supporting Grafana by providing some real-time data, such as the DT location in the system.  
 
 It is the manager who communicates directly with the Orchestrator and controls when a migration should occur or not. The trigger for a migration is based on the physical location of the OBU and it is automated. However, an API was implemented, that provides a collection of endpoints that allow us to execute operations, such as starting a migration process on a DT, but also provides relevant information to the Data Visualization Dashboard.
 
-#### Dashboards 
+**Dashboards** 
 
 Two data dashboards are deployed on the same machine that the manager is on. These consume data from the message network and display it in a user-friendly interface. 
 
 Important to note a small but relevant component adjacent to this dashboard, which is the proxy, an intermediary in communications that transforms some of the values before sending them to the user-friendly-interface.
 
-#### Technologies
+<br></br>
+
+### Technologies
 
 In this section, we describe the purposes and the reasons behind the choices of the technologies used to develop this project. Besides that, there is a brief preview of the advantages of using such technologies.
 
-#### Docker 
+**Docker** 
 
 In the beginning of this project, we were provided with a Docker image which contained the code, dependencies and configuration of a digital twin application.
 
-#### Mosquitto 
+**Mosquitto**
 
 This digital twin was consuming from a topic of a message broker that was set up using Mosquitto, an open-source message broker, and was consuming the messages the OBU was publishing on said topic. 
 
-#### Kubernetes 
+**Kubernetes** 
 
 One of the goals of the project is to offer digital twins through CNFs. This CNF would be instantiated in a MEC. As mentioned in the architecture section, we did not use real MEC and instead simulated its existence with two Kubernetes clusters, each in separate machines. The DTs will be deployed in these. However, we cannot just deploy a Docker image in a Kubernetes cluster. We had to create a Kubernetes application which contained not only our digital twin docker image, but also all the components necessary to integrate it in a Kubernetes cluster environment.
 
-#### Open-Source MANO 
+**Open-Source MANO** 
 
 It is important to highlight that in our solution, the number of digital twins deployed in a cluster is subject to change, according to real-world changes. Not only that, but our solution must also handle the creation and deployment of a digital twin at any given time without any negative impact and this process needs to be automated and not need any human intervention. For this to happen we need our orchestrator. 
 
 With that being said, we chose Open-Source MANO as our orchestrator, given that it can manage the different Kubernetes applications inside each cluster. For this to occur, we describe how our Kubernetes application should look like to OSM to allow it to orchestrate and manage it properly.
 
-#### Helm 
+**Helm** 
 
 To do this we used Helm, which is a package manager for Kubernetes applications. Helm allows us to define our Kubernetes application in a Helm Chart. This Helm Chart contains the files which define the structure, configuration and deployment of our Kubernetes application and it is hand and since OSM can handle Helm Charts, we encapsulated our Digital Twins Kubernetes application in a Helm Chart, and we provided it to OSM so that it can manage the application deployments in the different clusters. With this process completed, we were able to launch our CNF.
 
-#### FastAPI 
+**FastAPI** 
 
 Our solution must also handle the migration of a Digital Twin from one cluster to another. This process is accomplished by terminating a Kubernetes application from one cluster and creating it in another cluster. However, it is important to note that this implementation is only possible because our system is stateless, meaning its operations do not rely on any stored data and different applications can be created and terminated without any negative impact in the overall system. 
 
 So, to handle the migration we had to implement a component that integrated an API which would then be used to communicate to OSM when a migration needed to occur. To implement this API we used FastAPI, a python framework that allows us to create APIs in a very quick and simple manner. This way, we can create an endpoint we can call that handles the logic adjacent to the migration process.
 
-#### Grafana 
+**Grafana** 
 
 Now that our solution supports the migration of the Digital Twins among clusters, we still need an interface that allows the user to see not only the Digital Twin information, but also the migration process happening. So, we deployed a message broker, also using Mosquitto, and made all Digital Twins publish their messages to a topic in this broker. This broker was deployed in the same virtual machine where a container running a Grafana Instance was deployed and displaying the different Digital Twins information.
 
@@ -447,7 +469,10 @@ Now that our solution supports the migration of the Digital Twins among clusters
 
 The process described in this section can be visualized in the architecture diagram illustrated in Figure 8. 
 
-(insert image)
+<div style={{textAlign:"center"}}>
+  <img src="https://media.discordapp.net/attachments/945711148903333949/1115264623189434468/techs_architecture.png" style={{width:"80%"}}/>
+  <p>Figure 8 - System Architecture</p>
+</div>
 
 <br></br>
 
@@ -458,6 +483,8 @@ The process described in this section can be visualized in the architecture diag
 ### Exploration and Deployment of vVCU Image
 
 The DT Docker image used was provided by our project advisors and had already been developed in the context of the parent projects. We explored, tested, and tried to adapt it given the context of our problem.
+
+<br></br>
 
 ### Deployment of vVCU Using Kubernetes and Helm Chart
 
@@ -517,6 +544,8 @@ spec:
           periodSeconds: 1 
 ```
 
+<br></br>
+
 Below is the yaml file that describes the Kubernetes Service encapsulated in the Helm Chart.
 
 ```yaml title="Service"
@@ -534,6 +563,8 @@ spec:
   type: NodePort 
 ```
 
+<br></br>
+
 ### Encapsulation of Helm Chart into a Cloud-Native Network Function
 
 Before we describe our solution, it is important to do a brief overview of MANO. There are three managers in MANO: 
@@ -542,11 +573,18 @@ Before we describe our solution, it is important to do a brief overview of MANO.
 - Virtualized Network Function Manager (VNFM)
 - NFV Management and Orchestration (NFVO)
 
+<br></br>
+
 #### VIM 
 
 VIMs are responsible for managing the virtualized infrastructure, keeping track of the different resources that are allocated for the VNFs. For our solution, two VIMs were created to manage the physical resources necessary to deploy our Kubernetes clusters. Figure 9 shows OSM’s dashboard, where we can see the two VIM Accounts we used for this project, each managing its own Kubernetes cluster.
 
-(insert image)
+<div style={{textAlign:"center"}}>
+  <img src="https://media.discordapp.net/attachments/945711148903333949/1115266310155288636/Screenshot_from_2023-06-05_14-10-42.png"/>
+  <p>Figure 9 - OSM VIM interface</p>
+</div>
+
+<br></br>
 
 ### VNFs  
 
@@ -578,6 +616,8 @@ vnfd:
     helm-version: v3 
 ```
 
+<br></br>
+
 However, one cannot talk about VNFs without talking about Network Services, since a VNF is a component of a NS. Network Services provide all the functionalities, capabilities, and protocols to enable communication with our application. They are also packaged and instantiated using OSM, the same way we do with VNFs. Therefore, our NS descriptor file contains the information regarding the VNF such as its id and connection points. 
 
 Below is the descriptor for the Network Service we used:
@@ -607,13 +647,20 @@ nsd:
     - vvcu-as-acnf 
 ```
 
+<br></br>
+
 #### NFVO 
 
 NFV Orchestrators have two major functionalities: Service Orchestration and Resource Orchestration. Service Orchestration refers to the management of the Network Services and its VNFs. On the other hand, Resource Orchestration refers to the management of the VIM resources between the different Network Functions. 
 
 Our Orchestrator will deploy our Digital Twins Kubernetes applications in the clusters according to the instructions it receives. It encapsulates each digital twin in a Network Service to make sure communication with our Kubernetes application is possible. Figure 12 displays OSM’s dashboard, the MANO we used.
 
-(insert image)
+<div style={{textAlign:"center"}}>
+  <img src="https://media.discordapp.net/attachments/945711148903333949/1115267051137798194/Screenshot_from_2023-06-05_14-13-43.png"/>
+  <p>Figure 10 - OSM dashboard</p>
+</div>
+
+<br></br>
 
 ### Migration of the vVCU Between Infrastructures
 
@@ -623,7 +670,14 @@ The migration process is handled by the manager, which, through its interaction 
 
 Due to its nature, a CNF allows us to migrate the DT between even MEC from different telco operators. However, as we mentioned before, in the context of the project, we did not have access to two different MEC nodes we could use to test and experiment with our solution. Thus, to emulate the two distinct infrastructures the DT would be deployed on, and migrated to and from, we used two Kubernetes Clusters, managed by two different VIM Accounts. 
 
-(insert image)
+<br></br>
+
+<div style={{textAlign:"center"}}>
+  <img src="https://media.discordapp.net/attachments/945711148903333949/1115267370836045924/Screenshot_from_2023-06-05_14-15-04.png" style={{width:"80%"}}/>
+  <p>Figure 11 - OSM’s north-bound API Swagger documentation</p>
+</div>
+
+<br></br>
 
 Currently, OSM has no native support to migrate an NS between hosts. However, in its essence, the migration process can be split into three phases:  
 
@@ -637,7 +691,14 @@ To run this check, the manager makes use of the Kubernetes API to check the pod�
 
 This migration process is encapsulated within an endpoint of the manager’s API, allowing us to call for a migration process to be started. The manager’s endpoints are listed in Figure 12.
 
-(insert image)
+<br></br>
+
+<div style={{textAlign:"center"}}>
+  <img src="https://media.discordapp.net/attachments/945711148903333949/1115267732200493066/Screenshot_from_2023-06-05_14-16-25.png" style={{width:"80%"}}/>
+  <p>Figure 12 - Manager’s API Swagger documentation</p>
+</div>
+
+<br></br>
 
 As proof of concept, the manager keeps track of an OBU’s location and migrates it from one cluster to another when it passes through an arbitrary geographic location. 
 
@@ -673,11 +734,23 @@ Moving on to the actual representation, we have created two Grafana dashboards f
 
 The first dashboard, displayed in Figure 13, contains a general overview of the entire system, representing some information on the VCUs, the perceived objects detected by them and information about the network flow and signal quality. This dashboard is considered the main dashboard of our system and it is the primary view when users interact with it.
 
-(insert image)
+<br></br>
+
+<div style={{textAlign:"center"}}>
+  <img src="https://media.discordapp.net/attachments/945711148903333949/1115269495129378887/Screenshot_from_2023-06-05_14-23-26.png" style={{width:"80%"}}/>
+  <p>Figure 13 - System Dashboard</p>
+</div>
+
+<br></br>
 
 The other dashboard, showcased in Figure 14, is focused on providing detailed information on the vVCUs (DTs). It contains panels displaying information regarding the selected DT by the user. It is possible to input the DT’s identifier on the top of the dashboard and, once the input matches an available DT, the dashboard will obtain data corresponding to the twin. In this dashboard is also possible to visualize the status of the DT, where is possible to verify if it is migrating or stable. The dashboard also keeps track of the migrations the twin has been through. 
 
-(insert image)
+<br></br>
+
+<div style={{textAlign:"center"}}>
+  <img src="https://media.discordapp.net/attachments/945711148903333949/1115269020527104051/image.png" style={{width:"80%"}}/>
+  <p>Figure 14 - Migration Dashboard</p>
+</div>
 
 <br></br>
 
@@ -715,7 +788,14 @@ In our communication times test, we got the following results:
 
 Analysing the results, seen in Figure 15, we can see a significant difference between the average measured times in both scenarios, is highly benefited for being in the same machine since the latency’s values are lower. These results align with the results obtained from this study mentioned in the State-of-the-Art regarding the migration of VNFs and its impact in network latency [8].
 
-(insert image)
+<br></br>
+
+<div style={{textAlign:"center"}}>
+  <img src="https://media.discordapp.net/attachments/945711148903333949/1115270138925691080/image.png" style={{width:"60%"}}/>
+  <p>Figure 15 - Ping round-trip times</p>
+</div>
+
+<br></br>
 
 Regarding the migration times test we got the following results: 
 
