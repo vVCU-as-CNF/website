@@ -21,8 +21,11 @@ function HomepageHeader() {
           including digital twins of 5G-enabled Vehicular Communications Units
         </p>
         <div className={styles.buttons} style={{ marginTop: "50px" }}>
-          <Link className="button button--secondary" to="/docs/documentation">
+          <Link style={{marginRight:"10px"}} className="button button--secondary" to="/docs/documentation">
             Learn More
+          </Link>
+          <Link style={{marginLeft:"10px"}} className="button button--secondary" to="/docs/report">
+            Read Report
           </Link>
         </div>
       </div>
