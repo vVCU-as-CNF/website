@@ -38,13 +38,13 @@ export default function Home() {
   return (
     <Layout>
       <HomepageHeader />
-        <div className={clsx(styles.ourTeam)}>
+        <div className={clsx(styles.ourTeam)} style={{marginTop:"3%"}}>
           <div className="container">
             <h1 className="">Our Goals</h1>
             <img src="img/goalspi.png" style={{maxWidth: "80%", marginTop:"30px"}}/>
           </div>
         </div>
-        <div className={clsx(styles.ourTeam)}>
+        <div className={clsx(styles.ourTeam)} style={{marginTop:"3%"}}>
           <div className="container">
             <h1 className="">Our Team</h1>
           </div>
